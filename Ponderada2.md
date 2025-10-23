@@ -53,22 +53,11 @@ O circuito foi montado conforme o diagrama abaixo:
 
 Quando a **chave está ligada ao VCC (+5 V)**:
 - O capacitor **carrega** através do **resistor de 1 MΩ**, com corrente limitada pela resistência alta.  
-- A carga é lenta, e a tensão no capacitor segue a curva exponencial:
-  \[
-  V_C(t) = V_{max}(1 - e^{-t/RC})
-  \]
+- A carga é lenta, e a tensão no capacitor segue a curva exponencial
 
 Quando a **chave é movida para o GND**:
-- O capacitor **descarga** através do **mesmo resistor**, de forma igualmente lenta:
-  \[
-  V_C(t) = V_{max} e^{-t/RC}
-  \]
-
-Como \( R = 1\,MΩ \) e \( C = 10\,µF \), a constante de tempo é:
-\[
-\tau = R \times C = 10\,\text{segundos}
-\]
-
+- O capacitor **descarga** através do **mesmo resistor**, de forma igualmente lenta
+  
 Isso significa que:
 - Após 10 segundos, o capacitor carrega aproximadamente **63% da tensão máxima (≈3,15 V)**.  
 - O processo de **descarga** segue a mesma regra temporal, resultando em curvas simétricas.
@@ -110,16 +99,16 @@ Foram gerados três gráficos para análise:
 
 - Comparação entre as duas curvas
   
-## 📈 Resultados 
+## Resultados 
 
 Os dados foram coletados via **Monitor Serial** e processados em Python.  
 A seguir, são apresentados os gráficos gerados:
 
-### 1️⃣ Carga no Capacitor (C)
+### Carga no Capacitor (C)
 ![Gráfico de carga no capacitor](assets/carga_capacitor.png)
 
-### 2️⃣ Descarga no Resistor (R)
+### Descarga no Resistor (R)
 ![Gráfico de descarga no resistor](assets/descarga_resistor.png)
 
-### 3️⃣ Comparação: Carga no C e Descarga no R
+### Comparação: Carga no C e Descarga no R
 ![Comparação entre C e R](assets/comparacao.png)
