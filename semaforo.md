@@ -119,10 +119,38 @@ O vídeo mostra:
 
 - O circuito funcionando na protoboard;
 
-- A autora demonstrando a montagem e explicando o tempo de cada fase.
+- Eu demonstrando a montagem e explicando o tempo de cada fase.
 
 - Todos os LEDs possuem resistores de 220 Ω para evitar danos.
 
 - O código foi testado e apresentou a temporização correta (6s / 4s / 2s).
 
 - O circuito foi montado de forma limpa e organizada, garantindo segurança e clareza visual.
+
+###  Passo a Passo da Montagem
+
+1. **Monte a base física:**  
+   Fixei a protoboard em um pedaço de madeira para dar estabilidade e deixar o protótipo visualmente mais bonito e realista.
+
+2. **Posicione os LEDs:**  
+   Coloquei os LEDs **vermelho, amarelo e verde** na protoboard, representando a ordem real de um semáforo.
+
+3. **Conecte os resistores:**  
+   Liguei um **resistor de 220 Ω** em série com cada LED para evitar sobrecarga de corrente.
+
+4. **Conecte os negativos (GND):**  
+   Todos os **cátodos (pernas curtas)** dos LEDs foram conectados à **linha azul da protoboard**, que está ligada ao **pino GND do Arduino**.
+
+5. **Conecte os pinos de controle:**  
+   - LED vermelho → pino **13**  
+   - LED amarelo → pino **12**  
+   - LED verde → pino **11**
+
+6. **Carregue o código no Arduino:**  
+   Utilize o código da classe `Semaforo` com ponteiros, definindo os tempos de **6, 4 e 2 segundos**.
+
+7. **Teste o funcionamento:**  
+   Verifique se os LEDs acendem na sequência correta: **vermelho → verde → amarelo**.  
+   Ajuste as conexões, se necessário, até obter o ciclo completo funcionando de forma contínua.
+
+---
